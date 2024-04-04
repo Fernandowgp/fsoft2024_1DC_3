@@ -1,0 +1,13 @@
+@startuml
+actor Cliente as c
+participant "Sistema" as s
+
+c -> s: 1. Fechar sessão
+s -> s: 1.1 Fecha a sessão
+alt
+  alt "Sessão fechada: true"
+    s -> c: return success
+  else "Sessão fechada: false"
+    s -> c: return failure
+end
+@enduml

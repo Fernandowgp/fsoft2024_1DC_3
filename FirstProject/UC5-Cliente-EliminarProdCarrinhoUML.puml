@@ -1,0 +1,16 @@
+@startuml
+actor Cliente as c
+participant "Sistema" as s
+
+c -> s: 1. Quer eliminar um produto do carrinho
+c -> s: 2. Verifica se existe algum produto no carrinho
+c -> s: 3. Seleciona um produto
+s -> s: 3.1. Regista a alteração
+
+alt
+  alt "Produto eliminiado: true"
+     s --> c: return success
+  else "Produto eliminiado: false"
+     s --> c: return failure
+end
+@enduml
