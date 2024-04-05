@@ -1,0 +1,32 @@
+@startuml
+class Cliente{
+    Id_Cliente
+    Nome
+    Email
+    Password
+    Morada
+}
+class Carrinho{
+    Id_Cliente
+    Id_Produto
+    Nome_Produto
+    Quantidade
+    Valor
+}
+class EncomendaDeCliente{
+    Id_Encomenda
+    Id_Cliente
+    Valor_Total
+}
+class Produto{
+    Id_Produto
+    Nome_Produto
+    Preço
+}
+
+Cliente -|> Carrinho
+Cliente -|> EncomendaDeCliente
+Carrinho -|> EncomendaDeCliente
+Produto --> Carrinho
+
+@enduml
