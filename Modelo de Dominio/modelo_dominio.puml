@@ -1,32 +1,42 @@
 @startuml
-class Cliente{
-    Id_Cliente
-    Nome
-    Email
-    Password
-    Morada
-}
-class Carrinho{
-    Id_Cliente
-    Id_Produto
-    Nome_Produto
-    Quantidade
-    Valor
-}
-class EncomendaDeCliente{
-    Id_Encomenda
-    Id_Cliente
-    Valor_Total
-}
-class Produto{
-    Id_Produto
-    Nome_Produto
-    Preço
-}
+    class Cliente{
+        Id_Cliente
+        Nome
+        Email
+        Password
+        Morada
 
-Cliente -|> Carrinho
-Cliente -|> EncomendaDeCliente
-Carrinho -|> EncomendaDeCliente
-Produto --> Carrinho
+        Criar_Cliente()
+        Editar_Cliente()
+        Apagar_Cliente()
+    }
+    class Carrinho{
+        Id_Cliente
+        Id_Produto
+        Nome_Produto
+        Quantidade
+        Valor
 
+        Remover_Produto()
+    }
+    class EncomendaDeCliente{
+        Id_Encomenda
+        Id_Cliente
+        Valor_Total
+
+        Finalizar_Encomenda()
+    }
+    class Produto{
+        Id_Produto
+        Nome_Produto
+        Preço
+
+    Adiciona    r_Carrinho()
+    }
+
+
+    Cliente -|> Carrinho
+    Cliente -|> EncomendaDeCliente
+    Carrinho -|> EncomendaDeCliente
+    Produto --> Carrinho
 @enduml

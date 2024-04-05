@@ -3,13 +3,13 @@ actor Cliente as c
 participant "Sistema" as s
 
 c -> s: 1. Ver os produtor
-s --> c: 2. Mostra uma lista dos produtos
-c -> s: 3. Seleciona o produto que pretende
-s --> c: 4. Verifica existe stock do produto selecionado
+s --> c: 1.1. Mostra uma lista dos produtos
+c -> s: 2. Seleciona o produto que pretende
+s --> c: 2.1. Verifica existe stock do produto selecionado
 alt
     alt "Produto selecionado: true":
         s-->c: Return true
     else "Produto selecionado: false"
-        s-->c: Cliente tem de escolher um produto diferente
+        s-->c: return failure
 end
 @enduml
