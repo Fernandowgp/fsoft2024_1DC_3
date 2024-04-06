@@ -3,9 +3,9 @@ actor Cliente as c
 participant "Sistema" as s
 
 c-> s: 1.Insere o nome de Utilizador
-s-> s: 1.1. Verifica se o utilizador já está a ser utilizado
 c-> s: 2. Insere uma password
-s-> s: 2.1. Verifica se a password é segura
+s-> s: 2.1. Verifica se o utilizador já está a ser utilizado
+s-> s: 2.2. Verifica se a password é segura
 alt
     alt "Sessão Iniciada: true":
         s --> c: Return success
