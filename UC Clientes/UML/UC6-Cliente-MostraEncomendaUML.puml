@@ -1,0 +1,15 @@
+@startuml
+actor Cliente as c
+participant "Sistema" as s
+
+c -> s: 1. Opção ver encomendas
+c -> s: 2. Seleciona a encomenda
+s -> s: 2.1. Verifica a encomenda
+s --> c: 2.2. Mostra a encomenda selecionada
+alt
+  alt "Encomenda: true"
+    s --> c: return success
+  else "Encomenda: false"
+    s --> c: return failure
+end
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+actor Cliente as c
+participant "Sistema" as s
+
+c -> s: 1. Adiciona um produto ao carrinho
+s --> c: 1.1. Apresenta a nova lista
+c -> s: 2. Carrega para retirar um produto
+s --> c: 2.1. Apresenta a nova lista
+c -> s: 3. Pretende fazer uma encomenda
+c -> s: 4. Insere o nome
+s -> s: 4.1. Regista o nome
+c -> s: 5. Insere os números do cartão
+s -> s: 5.1. Regista os números do cartão
+c -> s: 6. Insere a morada
+s -> s: 6.1. Regista a morada
+
+alt
+    alt "Verificar os dados inseridos: true"
+      s --> c: Return success
+      s -> s: 8.2. Limpa o carrinho
+    else "Verificar os dados inseridos: false"
+      s --> c: Return failure
+end
+@enduml
