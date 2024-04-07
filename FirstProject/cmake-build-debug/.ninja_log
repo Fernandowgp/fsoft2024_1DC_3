@@ -1,8 +1,0 @@
-# ninja log v5
-3	394	7314428356841057	CMakeFiles/FirstProject.dir/main.cpp.obj	1e02a049c10dcbe2
-42	140	7314442417500348	FirstProject.exe	ab29984902759a1a
-3	52	7314428563669600	CMakeFiles/FirstProject.dir/sources/factorial.cpp.obj	7a9aa541698d8250
-0	99	7314452857333593	build.ninja	5aba22b4d59d20ab
-3	41	7314442416592459	CMakeFiles/FirstProject.dir/sources/pl2.cpp.obj	317c8a3a17702966
-4	280	7314453287965787	CMakeFiles/FirstProject.dir/sources/pl3.cpp.obj	7a85df5b890c36a5
-280	362	7314453288759075	FirstProject.exe	2aa62669e7b4856a
