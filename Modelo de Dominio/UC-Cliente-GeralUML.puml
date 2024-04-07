@@ -1,0 +1,44 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Cliente{
+Id_Cliente
+Nome
+Email
+Password
+Morada
+
+Criar_Cliente()
+Editar_Cliente()
+Apagar_Cliente()
+}
+class Carrinho{
+Id_Cliente
+Id_Produto
+Nome_Produto
+Quantidade
+Valor
+
+Remover_Produto()
+}
+class EncomendaDeCliente{
+Id_Encomenda
+Id_Cliente
+Valor_Total
+
+Finalizar_Encomenda()
+}
+class Produto{
+Id_Produto
+Nome_Produto
+Preço
+
+Adicionar_Carrinho()
+}
+
+
+Cliente -|> Carrinho : Tem
+Cliente -|> EncomendaDeCliente : Cria
+Carrinho -|> EncomendaDeCliente : Recebe
+Carrinho  --> Produto : Contém
+@enduml
