@@ -37,8 +37,8 @@ Adicionar_Carrinho()
 }
 
 
-Cliente -|> Carrinho : Tem
-Cliente -|> EncomendaDeCliente : Cria
-Carrinho -|> EncomendaDeCliente : Recebe
-Carrinho  --> Produto : Contém
+Cliente "1"-|> "*"Carrinho : Contém
+Cliente "1"-|> "*" EncomendaDeCliente : Realiza
+Carrinho "1"-|> "1" EncomendaDeCliente : Necessita
+Carrinho "1"--> "*" Produto : Contém
 @enduml
