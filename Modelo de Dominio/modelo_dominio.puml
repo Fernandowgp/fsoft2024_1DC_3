@@ -9,9 +9,6 @@ Email
 Password
 Morada
 
-Criar_Cliente()
-Editar_Cliente()
-Apagar_Cliente()
 }
 class Carrinho{
 Id_Cliente
@@ -20,24 +17,37 @@ Nome_Produto
 Quantidade
 Valor
 
-Remover_Produto()
 }
 class EncomendaDeCliente{
 Id_Encomenda
 Id_Cliente
 Valor_Total
 
-Finalizar_Encomenda()
 }
 class Produto{
 Id_Produto
 Nome_Produto
 Preço
 
-Adicionar_Carrinho()
+}
+class Funcionario{
+
+Id_Funcionario
+Nome
+Data_Nascimento
+Morada
 }
 
+class Gerente{
 
+Id_gerente
+Nome
+Data_Nascimento
+Morada
+
+}
+Gerente "1" -|> "*" Funcionario : Gere
+Funcionario "*" --> "*" EncomendaDeCliente : Gere
 Cliente "1"-|> "*"Carrinho : Contém
 Cliente "1"-|> "*" EncomendaDeCliente : Realiza
 Carrinho "1"-|> "1" EncomendaDeCliente : Necessita
