@@ -1,0 +1,66 @@
+@startuml
+participant "controller: Controller" as C
+participant "view: View" as V
+participant "viewLogin: ViewLogin" as L
+participant ": Utils" as U
+participant "model: CompoStore" as s
+participant "Cliente: Cliente" as u
+participant "productSelect: ProductSelect" as p
+C -> V : 1. menuBegin()
+
+activate C
+
+activate V
+V-->C : 2
+deactivate V
+
+C -> V : 2. menuLogin()
+
+activate V
+V-->C : 3
+deactivate V
+C -> L : 3. insertCredentials()
+activate L
+L -> U : 3.1. getString()
+activate U
+U --> L : username
+deactivate U
+L -> U : 3.2. getString()
+activate U
+U --> L : password
+deactivate U
+L -> u : <<verify>>
+deactivate L
+
+C -> s : 4. getClienteList()
+activate s
+s --> C : clienteList()
+deactivate s
+
+C -> u : 5. Login()
+activate u
+u --> C : menuCliente
+deactivate u
+
+
+C -> V : 6. MenuCliente()
+activate V
+V --> C
+deactivate V
+C -> V : 7. MenuProducts()
+activate V
+V --> C
+deactivate V
+
+C -> s : 8. getProductList()
+activate s
+s --> C
+deactivate s
+
+C -> p : 9. printProductList()
+activate p
+p --> C : ProductsList
+deactivate p
+
+deactivate L
+@enduml

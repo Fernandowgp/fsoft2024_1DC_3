@@ -1,15 +1,19 @@
 @startuml
-actor Cliente as c
-participant "Sistema" as s
+actor Gerente as g
+participant Sistema as s
 
-c -> s: 1. Ver os produtor
-s --> c: 1.1. Mostra uma lista dos produtos
-c -> s: 2. Seleciona o produto que pretende
-s --> c: 2.1. Verifica existe stock do produto selecionado
+g -> s: Opção adicionar Funcionário
+s --> g   : Pede dados do funcionário
+g -> s: preenche os dados do funcionário
+
+    s -> s: adiciona o novo funcionário
+    s -> g: exibe mensagem de sucesso
+
+
 alt
     alt "Produto selecionado: true":
-        s-->c: Return true
+        s-->g: Return true
     else "Produto selecionado: false"
-        s-->c: return failure
+        s-->g: return failure
 end
 @enduml
