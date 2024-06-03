@@ -10,8 +10,16 @@
 
 class Controller {
 private:
-    Store model;
-    View view;
+    Store               model;
+    View                view;
+    ClientOrderView     clientOrderView;
+    ClientView          clientView;
+    ProductView         productView;
+    CartView            cartView;
+
+    User*               loggedUser{};
+    Cart                cart;
+
 
 public:
     Controller(Store& store);
