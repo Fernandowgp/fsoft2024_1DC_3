@@ -13,4 +13,16 @@ add_executable(fsoft2024_1dc_3 main.cpp
         headers/controllers/Controller.h
         sources/controllers/Controller.cpp
         headers/model/Store.h
-        sources/model/Store.cpp)
+        sources/model/Store.cpp
+        headers/model/Login.h
+        sources/model/Login.cpp
+        headers/views/ClientView.h
+        headers/views/ClientOrderView.h
+        headers/views/ProductView.h
+        headers/views/CartView.h
+        sources/views/CartView.cpp
+        sources/views/ClientOrderView.cpp
+        sources/views/ClientView.cpp
+        sources/views/ProductView.cpp
+        headers/model/ClientOrder.h
+        headers/model/Cart.h)
