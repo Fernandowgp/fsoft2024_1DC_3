@@ -1,0 +1,10 @@
+ProductID,name,description,category,brand,stock,sellingPrice,isAvailable
+1,AMD Ryzen 7 7800X3D,AMD 7th Gen CPU High Range,CPU,AMD,100,399.90,1
+2,Intel I5-13800K,Intel 13th Gen CPU Mid Range,CPU,INTEL,10,279.99,1
+3,NVIDIA GeForce RTX 3060, Graphics Card from the NVidia 3000s Series,GPU,NVidia,5,599.99,1
+4,AOC Monitor 240Hz 1ms,Last Gen Monitor from AOC,Monitor,AOC,24,189.90,1
+5,Corsair K70 RGB MK.2,Mechanical Gaming Keyboard,Keyboard,Corsair,50,199.99,1
+6,Seagate BarraCuda 2TB 3.5,2TB 3.5 Internal Hard Drive ,Internal Storage,Seagate,20,71.90,1
+7,MSI GeForce GTX 1660 Ti,Graphics Card from MSI,GPU,MSI,35,250,1
+8,Cooler CoolerMaster X3200,Water Cooler from CoolerMaster for a extra cold PC,Cooler,CoolerMaster,16,119.99,1
+9,Logitech G PRO WIRELESS,Wireless Mouse for Gaming,Mouse,Logitech,4,169.99,1
