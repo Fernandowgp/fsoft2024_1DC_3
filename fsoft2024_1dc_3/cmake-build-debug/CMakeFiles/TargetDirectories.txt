@@ -1,3 +1,0 @@
-C:/Users/ferna/CLionProjects/fsoft2024_1DC_3/fsoft2024_1dc_3/cmake-build-debug/CMakeFiles/fsoft2024_1dc_3.dir
-C:/Users/ferna/CLionProjects/fsoft2024_1DC_3/fsoft2024_1dc_3/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/ferna/CLionProjects/fsoft2024_1DC_3/fsoft2024_1dc_3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
