@@ -58,7 +58,8 @@ bool Date::isValid(int day, int month, int year){
 
 }
 Date::Date(){
-    time_t currentTime = time({});
+    // Obtain current time since epoch
+    time_t currentTime = time(nullptr);
     tm* now = localtime(&currentTime);
     setDate(now->tm_mday,(now->tm_mon+1), (now->tm_year+1900));
 }
@@ -81,17 +82,22 @@ bool Date::operator == (const Date& obj) const{
     }
     return false;
 }
-bool Date::operator > (const Date& obj)const{
-    if(this->year > obj.year){
+bool Date::operator > (const Date& obj) const{
+    if (this->year > obj.year) {
         return true;
     }
-    if(this->month > obj.month){
+    if (this->year < obj.year) {
+        return false;
+    }
+
+    if (this->month > obj.month) {
         return true;
     }
-    if(this->day > obj.day){
-        return true;
+    if (this->month < obj.month) {
+        return false;
     }
-    return false;
+
+    return this->day > obj.day;
 }
 bool Date::operator < (const Date& obj) const{
     if(*this == obj){
